@@ -1,0 +1,40 @@
+/* Shared interface scale. Data graphics keep their official colours and labels. */
+:root {
+  --font-interface: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, 'PingFang TC', 'Microsoft JhengHei', sans-serif;
+  --text-body: 16px;
+  --text-meta: 14px;
+  --text-control: 16px;
+  --text-card: 20px;
+  --text-section: 26px;
+  --text-page: 36px;
+  --text-page-mobile: 38px;
+  --control-height: 48px;
+  --line-body: 1.65;
+  --color-ink: #1e2721;
+  --color-text: #334238;
+  --color-muted: #58695d;
+  --color-brand: #254b3f;
+  --color-canvas: #fbfaf6;
+  --color-surface: #edf2e9;
+  --color-border: #cbd4c6;
+  --color-warning: #85551f;
+  --color-danger: #a3432e;
+  --color-focus: #276593;
+  --radius-control: 6px;
+  --radius-card: 6px;
+  --space-unit: 4px;
+  --map-panel-width: 420px;
+}
+
+/* A denser reading scale for phones; keep generous touch targets. */
+@media (max-width: 760px) {
+  :root {
+    --text-body: 16px;
+    --text-meta: 14px;
+    --text-control: 16px;
+    --text-card: 19px;
+    --text-section: 24px;
+    --text-page-mobile: 30px;
+    --line-body: 1.75;
+  }
+}

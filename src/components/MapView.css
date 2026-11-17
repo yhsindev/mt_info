@@ -1,0 +1,23 @@
+.map-area .maplibregl-ctrl-group button{width:44px;height:44px}
+.map-area .map-reset{width:44px;height:44px;top:112px;right:10px}
+.map-area .map-region{min-height:44px;padding:0 8px 0 10px;gap:7px}
+.map-islands-toggle{pointer-events:auto;min-height:44px;min-width:66px;padding:0 7px;margin-left:3px;border-left:1px solid #dce4d9;font-size:11px;font-weight:600;color:#315f4d}
+.map-islands-toggle:hover{background:#edf4ed}
+.map-area.layer-equipment .equipment-legend{bottom:24px;left:24px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;max-width:calc(100% - 90px);padding:10px 12px;background:#fffffff5;color:#314b40;font-size:11px;z-index:1}
+.equipment-legend-item{display:inline-flex;align-items:center;gap:5px;white-space:nowrap}
+.equipment-legend-item b{font-weight:650}
+.equipment-legend-item.type-AED{color:#c45b37}
+.equipment-legend-item.type-PAC{color:#39816a}
+.equipment-legend-item.type-FIRST_AID{color:#3b78a1}
+.equipment-legend-note{font-size:10px;color:#67796f;white-space:nowrap}
+.equipment-selected-marker{position:absolute;display:grid;place-items:center;width:44px;height:44px;padding:3px;border:3px solid #fff;border-radius:50%;box-shadow:0 0 0 4px #273f3780,0 4px 12px #263f3735;cursor:pointer}
+.equipment-selected-marker>canvas{width:32px;height:32px}
+.equipment-selected-label{position:absolute;left:50%;top:calc(100% + 7px);transform:translateX(-50%);background:#fff;color:#263f37;border:1px solid #d9e3db;border-radius:5px;padding:5px 8px;font-size:11px;font-weight:600;max-width:220px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;box-shadow:0 2px 7px #263f3720;pointer-events:none}
+@media(max-width:760px){
+  .map-area.layer-equipment .equipment-legend{top:64px;bottom:auto;left:14px;gap:7px 10px;padding:7px 9px;max-width:calc(100% - 80px);font-size:10px}
+  .equipment-legend-note{font-size:9px}
+  .map-area.layer-equipment .map-warning{top:123px}
+  .map-area .map-region{padding:0 7px 0 10px;top:12px}
+  .equipment-overview .map-area .maplibregl-ctrl-bottom-left,.equipment-overview .map-area .maplibregl-ctrl-bottom-right{top:auto;bottom:238px}
+  .equipment-overview:has(.information-panel.expanded) .map-area .maplibregl-ctrl-bottom-left,.equipment-overview:has(.information-panel.expanded) .map-area .maplibregl-ctrl-bottom-right{bottom:calc(69% + 6px)}
+}

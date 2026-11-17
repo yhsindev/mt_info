@@ -1,0 +1,133 @@
+{
+  "checkedAt": "2026-10-27",
+  "platform": "健行筆記",
+  "termsUrl": "https://biji.co/privacy/",
+  "scope": "已透過網站正式下載入口取得並完成本機 XML 檢查的候選軌跡；原檔不在本版本庫，未取得公開再利用授權。",
+  "timeReferencePolicy": "GPX 頁面里程及花費時間是該作者軌跡的描述，不是範本參考分鐘，更不是上河時間。百岳時間另以實際核對的上河原始版本為來源層；目前只有圖幅索引，沒有上河分段分鐘或公開重發授權。",
+  "candidates": [
+    {
+      "templateId": "shuanling-three-days",
+      "gpxId": 4673487,
+      "sourceUrl": "https://hiking.biji.co/index.php?act=gpx_detail&id=4673487&q=trail",
+      "sourceTitle": "登閂山鈴鳴山,清泉橋、730林道11.7k出發,經人待山北峰、人待山,宿25k工寮",
+      "author": "光明山阿正",
+      "recordedAt": "2025-06-28",
+      "providedAt": "2025-07-02",
+      "sourceDistanceKm": 37.16,
+      "sourcePagePlaces": ["清泉橋", "730林道11.7K", "人待山北峰", "人待山", "25K工寮", "閂山", "鈴鳴山"],
+      "fileInspection": {
+        "xmlValid": true,
+        "tracks": 1,
+        "segments": 3,
+        "trackPoints": 6345,
+        "waypoints": 37
+      },
+      "versionDifference": "來源描述 2025-06-28 至 29 兩日行程，包含清泉橋與人待山等節點；現行範本從 730 林道 11.7K 起算，分成三日，未納入人待山。不能直接把此軌跡當作範本全線。",
+      "publicReusePermission": "not_obtained"
+    },
+    {
+      "templateId": "baigu",
+      "gpxId": 5174870,
+      "sourceUrl": "https://hiking.biji.co/index.php?act=gpx_detail&id=5174870&q=trail",
+      "sourceTitle": "白姑大山兩天一夜",
+      "author": "呂小霹",
+      "recordedAt": "2025-11-22",
+      "providedAt": "2025-11-23",
+      "sourceDistanceKm": 18.45,
+      "sourcePagePlaces": ["白姑大山"],
+      "fileInspection": {
+        "xmlValid": true,
+        "tracks": 1,
+        "segments": 3,
+        "trackPoints": 11087,
+        "waypoints": 0
+      },
+      "versionDifference": "來源與現行範本都以白姑兩日往返為主題，但檔案沒有命名路點，尚未核對登山口、司晏池宿營與各段是否吻合；不可由軌跡自動配出範本路點。",
+      "publicReusePermission": "not_obtained"
+    },
+    {
+      "templateId": "daxiaojian",
+      "gpxId": 5495845,
+      "sourceUrl": "https://hiking.biji.co/index.php?act=gpx_detail&id=5495845&q=trail",
+      "sourceTitle": "2026.04.09-04.11 大小劍 三天兩夜_一生一次(推論山 油婆蘭山 布伕奇寒山 佳陽山 劍山 大劍山)",
+      "author": "林小登",
+      "recordedAt": "2026-04-09",
+      "providedAt": "2026-04-12",
+      "sourceDistanceKm": 50.71,
+      "sourcePagePlaces": ["仁壽橋", "登山口", "推論山", "油婆蘭山", "布伕奇寒山", "佳陽山", "劍山", "大劍山"],
+      "fileInspection": {
+        "xmlValid": true,
+        "tracks": 1,
+        "segments": 1,
+        "trackPoints": 5864,
+        "waypoints": 23
+      },
+      "versionDifference": "來源三天兩夜，描述從仁壽橋經登山口進出；現行範本由松茂起算並分四日。單一 GPX 路段也不代表單日行程，不能直接沿用範本日界與參考分鐘。",
+      "publicReusePermission": "not_obtained"
+    },
+    {
+      "templateId": "xueshan-west-ridge",
+      "gpxId": 6114289,
+      "sourceUrl": "https://hiking.biji.co/index.php?act=gpx_detail&id=6114289&q=trail",
+      "sourceTitle": "【雪山西稜四日】雪山登山口至小雪山旅遊資訊站",
+      "author": "MikeYeh",
+      "recordedAt": "2026-10-09",
+      "providedAt": "2026-10-13",
+      "sourceDistanceKm": 67.52,
+      "sourcePagePlaces": ["雪山登山口", "雪山主峰", "火石山下營地", "火石山", "頭鷹山", "奇峻山森林營地", "大雪山", "中雪山", "21K合流山營地", "小雪山遊客中心"],
+      "fileInspection": {
+        "xmlValid": true,
+        "tracks": 1,
+        "segments": 1,
+        "trackPoints": 25947,
+        "waypoints": 0
+      },
+      "versionDifference": "來源描述四日東向西：火石山下、奇峻山森林、21K合流山分別過夜；現行範本分六日，使用七卡、翠池、大南西鞍與11K等不同分日節點。檔案沒有命名路點，不能自動對應範本宿營點。",
+      "planningSuitability": "僅供地理方向比對。四日屬快速行程，不是六日範本的分日或移動時間依據。",
+      "publicReusePermission": "not_obtained"
+    },
+    {
+      "templateId": "daba",
+      "gpxId": 5685422,
+      "sourceUrl": "https://hiking.biji.co/index.php?act=gpx_detail&id=5685422&q=trail",
+      "sourceTitle": "20260621–0623 大霸群峰三天",
+      "author": "李享典",
+      "recordedAt": "2026-06-21",
+      "providedAt": "2026-06-24",
+      "sourceDistanceKm": 58.33,
+      "sourcePagePlaces": ["大鹿林道", "九九山莊", "大霸尖山", "小霸尖山"],
+      "selectedTrackWaypoints": ["10K牌", "下切處", "九九山莊", "加利山登山口", "伊澤山登山口", "中霸坪", "大霸尖山", "小霸尖山", "中霸山屋", "伊澤山", "加利山", "馬達拉溪登山口"],
+      "fileInspection": {
+        "xmlValid": true,
+        "tracks": 1,
+        "segments": 14,
+        "trackPoints": 13933,
+        "waypoints": 16
+      },
+      "versionDifference": "來源三日由大鹿林道進出九九山莊，檔案有分段與命名路點，並包含小霸尖山；現行範本止於大霸霸基，官方 131 點參考線也缺觀霧至馬達拉溪約19公里林道。須逐段核對林道進出、霸基與小霸支線，不可直接覆蓋範本或把軌跡實走時間標成上河。",
+      "publicReusePermission": "not_obtained"
+    },
+    {
+      "templateId": "yushan",
+      "gpxId": 6015543,
+      "sourceUrl": "https://hiking.biji.co/index.php?act=gpx_detail&id=6015543&q=trail",
+      "sourceTitle": "玉山主峰、玉山前峰、玉山北峰、排雲山莊",
+      "author": "光明山阿正",
+      "recordedAt": "2026-09-20",
+      "providedAt": "2026-09-22",
+      "sourceDistanceKm": 26.43,
+      "sourcePagePlaces": ["塔塔加登山口", "孟祿亭", "前峰步道岔", "白木林", "排雲山莊", "玉山主峰", "玉山前峰", "玉山北峰"],
+      "selectedTrackWaypoints": ["塔塔加登山口", "孟祿亭", "前峰步道岔", "白木林", "排雲山莊", "主北岔", "玉山主峰"],
+      "fileInspection": {
+        "xmlValid": true,
+        "tracks": 1,
+        "segments": 3,
+        "trackPoints": 4915,
+        "waypoints": 35
+      },
+      "versionDifference": "2026 年兩日軌跡另走前峰與北峰；本站玉山主峰範本只取塔塔加—排雲—主峰的共同節點核對，不能沿用全檔距離、日界或兩條支線。",
+      "planningSuitability": "主線部分重合，可核對重要路點；前峰與北峰支線排除，移動時間仍待上河與官方資料查核。",
+      "publicReusePermission": "not_obtained"
+    }
+  ]
+}

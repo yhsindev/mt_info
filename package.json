@@ -1,0 +1,49 @@
+{
+  "name": "mt_info",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -k -n api,web \"tsx watch server/index.ts\" \"vite --host 127.0.0.1\"",
+    "build": "tsc --noEmit && vite build && node scripts/build-cards-offline.mjs",
+    "start": "NODE_ENV=production tsx server/index.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "sync:data": "tsx scripts/sync-data.ts",
+    "sync:trails": "tsx scripts/import-trail-geometries.ts",
+    "inspect:gpx": "node --import tsx scripts/inspect-gpx.ts",
+    "check:public": "node --import tsx scripts/audit-public-files.ts"
+  },
+  "dependencies": {
+    "@mapbox/vector-tile": "^2.0.4",
+    "csv-parse": "^7.0.3",
+    "docx": "^9.13.0",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "fast-xml-parser": "^5.12.1",
+    "lucide-react": "^0.468.0",
+    "maplibre-gl": "^6.14.0",
+    "pbf": "^4.0.1",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.3",
+    "@types/geojson": "^7946.0.16",
+    "@types/node": "^24.7.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "@types/supertest": "^6.0.3",
+    "@vitejs/plugin-react": "^5.0.4",
+    "concurrently": "^9.2.1",
+    "supertest": "^7.1.4",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3",
+    "vite": "^7.1.9",
+    "vitest": "^5.0.4"
+  },
+  "engines": {
+    "node": "^22.12.0 || ^24.0.0 || >=26.0.0"
+  },
+  "license": "MIT"
+}

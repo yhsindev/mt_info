@@ -1,0 +1,75 @@
+/* Run after plan-qa.cjs against a production preview; only isolated contexts. */
+const assert = require('node:assert/strict');
+const fs = require('node:fs/promises');
+const path = require('node:path');
+const { chromium } = require('playwright');
+const base = process.env.MT_INFO_QA_URL || 'http://127.0.0.1:8788';
+const out = path.resolve('artifacts/plan-qa');
+const result = { base, checks: {} };
+const quotaOnly = process.argv.includes('--quota-only');
+(async () => {
+  const browser = await chromium.launch({ channel: 'chrome', headless: true });
+  await fs.mkdir(out, { recursive: true });
+  try {
+    if (!quotaOnly) {
+    const fail = await browser.newContext({ viewport: { width: 390, height: 844 } });
+    await fail.route('**/assets/PlanPanel-*.js', route => route.abort('failed'));
+    const page = await fail.newPage(); await page.goto(base + '/?layer=conditions');
+    await page.getByRole('button', { name: '計畫通', exact: true }).click();
+    await page.getByRole('alert').filter({ hasText: '計畫編輯器暫時無法開啟' }).waitFor();
+    assert.equal(await page.locator('.header-nav button:visible').count(), 5);
+    await page.locator('.planner-loading').getByRole('button', { name: '關閉', exact: true }).click();
+    await page.getByRole('button', { name: '集水區', exact: true }).click(); assert.ok(page.url().includes('layer=basins'));
+    result.checks.chunkFailurePreservesNavigation = true; await fail.close();
+    const offline = await browser.newContext({ viewport: { width: 390, height: 844 } });
+    const op = await offline.newPage(); await op.goto(base + '/?layer=conditions&plan=1'); await op.locator('.plan-page').waitFor();
+    await op.getByRole('button', { name: '編輯計畫', exact: true }).click();
+    await offline.setOffline(true); await op.getByLabel('計畫名稱', { exact: true }).fill('離線記憶體草稿測試');
+    const downloadPromise = op.waitForEvent('download'); await op.getByLabel('匯出計畫（固定工具列）').selectOption('json');
+    const download = await downloadPromise; await download.saveAs(path.join(out, 'offline-draft.json'));
+    assert.equal(JSON.parse(await fs.readFile(path.join(out, 'offline-draft.json'), 'utf8')).title, '離線記憶體草稿測試');
+    assert.equal(await op.getByLabel('計畫名稱', { exact: true }).inputValue(), '離線記憶體草稿測試');
+    result.checks.offlineJsonWithoutExportChunk = true; await offline.close();
+    const network = await browser.newContext(); await network.route('**/api/conditions', async route => { await new Promise(resolve => setTimeout(resolve, 1500)); await route.fulfill({ status: 503, json: { message: '受控來源失敗' } }); });
+    const np = await network.newPage(); await np.goto(base + '/?layer=conditions&plan=1'); await np.locator('.plan-page').waitFor();
+    await np.getByRole('button', { name: '編輯計畫', exact: true }).click();
+    await np.getByLabel('計畫名稱', { exact: true }).fill('來源失敗仍可編輯');
+    await np.getByRole('button', { name: '大霸三日參考', exact: true }).click(); await np.getByRole('alertdialog').getByRole('button', { name: '確認取代', exact: true }).click();
+    const current = np.locator('.plan-section').filter({ has: np.locator('summary', { hasText: /^大霸目前收錄的步道公告$/ }) });
+    await current.locator('summary').first().click(); await current.getByText('目前無法更新公告；下方可能是先前資料，請核對來源。', { exact: true }).waitFor();
+    assert.equal(await current.locator('.plan-advisory').count(), 0);
+    assert.equal(await current.getByRole('button', { name: '附入目前公告快照', exact: true }).isDisabled(), true);
+    result.checks.sourceFailureIsExplicit = true;
+    const exported = await fs.readFile(path.join(out, 'roundtrip.json'));
+    await np.locator('.plan-page input[type=file]').setInputFiles({ name: 'valid.json', mimeType: 'application/json', buffer: exported });
+    await np.getByRole('alertdialog').getByRole('button', { name: '取消', exact: true }).click();
+    assert.equal(await np.getByLabel('隊伍人數', { exact: true }).inputValue(), '');
+    await np.locator('.plan-page input[type=file]').setInputFiles({ name: 'valid.json', mimeType: 'application/json', buffer: exported });
+    await np.getByRole('alertdialog').getByRole('button', { name: '確認取代', exact: true }).click();
+    assert.equal(await np.getByLabel('隊伍人數', { exact: true }).inputValue(), '4');
+    result.checks.validImportRequiresExplicitReplacement = true; await network.close();
+    }
+    const quota = await browser.newContext({ viewport: { width: 390, height: 844 } });
+    await quota.addInitScript(() => { Storage.prototype.setItem = function () { throw new DOMException('QA quota denied', 'QuotaExceededError'); }; });
+    const qp = await quota.newPage(); await qp.goto(base + '/?layer=conditions&plan=1');
+    const plan = qp.locator('.plan-page'); await plan.waitFor();
+    await plan.locator('[data-template-id=xueshan]').getByRole('button', { name: '使用此範本', exact: true }).click();
+    await plan.getByRole('alertdialog').getByRole('button', { name: '確認取代', exact: true }).click();
+    await plan.getByRole('alert').filter({ hasText: '本機儲存失敗' }).waitFor();
+    await qp.locator('a.brand').click();
+    await plan.getByRole('alertdialog').filter({ hasText: '尚未保存最新輸入' }).waitFor();
+    assert.equal(await plan.isVisible(), true);
+    await plan.getByRole('alertdialog').getByRole('button', { name: '取消', exact: true }).click();
+    const start = plan.locator('details').filter({ has: qp.locator('summary', { hasText: /^起始方式$/ }) }).first();
+    if (!await start.evaluate(node => node.open)) await start.locator('summary').first().click();
+    let chooserOpened = false; qp.on('filechooser', () => { chooserOpened = true; });
+    await plan.getByRole('button', { name: '匯入 GPX 路線', exact: true }).click();
+    await plan.getByRole('alert').filter({ hasText: '離開前未能保存最新輸入' }).waitFor();
+    await qp.waitForTimeout(300); assert.equal(chooserOpened, false); assert.equal(await plan.isVisible(), true);
+    assert.ok((await plan.getByLabel('路線名稱', { exact: true }).inputValue()).includes('雪山'));
+    result.checks.unsavedTemplateProtectsBrandAndGpxImport = { brandRequiresConfirmation: true, cancelKeepsDraft: true, importFileChooserBlocked: true };
+    await qp.screenshot({ path: path.join(out, 'plan-quota-gpx-protected.png') });
+    await quota.close();
+  } finally { await browser.close(); await fs.writeFile(path.join(out, quotaOnly ? 'quota-result.json' : 'fault-result.json'), JSON.stringify(result, null, 2)); }
+  console.log(JSON.stringify(result, null, 2));
+})().catch(error => { console.error(error); process.exitCode = 1; });

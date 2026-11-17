@@ -1,0 +1,26 @@
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+.DS_Store
+.cache/
+artifacts/
+.taste-skill/
+.agents/
+.codex/
+.aws/
+private/
+local/
+*.gpx
+*.fit
+*.docx
+
+# Keep the two reviewed workbooks; generated previews and inspection logs stay local.
+/outputs/*
+!/outputs/route-library-2026-10-25/
+!/outputs/alpine-library-2026-10-25/
+/outputs/route-library-2026-10-25/*
+/outputs/alpine-library-2026-10-25/*
+!/outputs/route-library-2026-10-25/mt_info_路線資訊庫範本.xlsx
+!/outputs/alpine-library-2026-10-25/mt_info_百岳路線資訊庫.xlsx

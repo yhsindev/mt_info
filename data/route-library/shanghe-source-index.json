@@ -1,0 +1,382 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-10-25T08:18:27.221Z",
+  "publisher": "上河文化",
+  "edition": "2020 高山百岳地形圖系列",
+  "indexUrl": "https://www.sunriver.com.tw/step2020.htm",
+  "copyrightUrl": "https://www.sunriver.com.tw/copyrights.htm",
+  "legacyIndexUrl": "https://sunriver.com.tw/map_hiking_index.htm",
+  "rightsStatus": "written_permission_not_obtained",
+  "timeDataImported": false,
+  "notes": [
+    "只保存出版社目錄、圖號與超連結，未下載保存圖片或轉錄整套步程路網。",
+    "索引連結存在不代表附件內容、印行年份、修改日期、現行路徑或使用權已確認。",
+    "G07與G09各有更新連結；未把檔名new3推定為特定發布日，也不混用2004舊版。",
+    "圖號是圖幅分類，不是可直接帶入的行程；一張圖可能包含多條方向及支線。"
+  ],
+  "sheets": [
+    {
+      "id": "G02",
+      "title": "玉山群峰縱走",
+      "stepDiagramLinks": [
+        {
+          "url": "https://www.sunriver.com.tw/images/hiking/G02_hiking.jpg",
+          "label": "玉山群峰"
+        }
+      ],
+      "elevationDiagramLinks": [
+        {
+          "url": "https://www.sunriver.com.tw/images/hiking/xG02-2.jpg",
+          "label": "玉山主東"
+        },
+        {
+          "url": "https://www.sunriver.com.tw/images/hiking/xG02-3.jpg",
+          "label": "玉山南"
+        },
+        {
+          "url": "https://www.sunriver.com.tw/images/hiking/xG02-1.jpg",
+          "label": "南玉山"
+        }
+      ],
+      "attachmentContentChecked": false
+    },
+    {
+      "id": "G03",
+      "title": "郡大山・西巒大山",
+      "stepDiagramLinks": [
+        {
+          "url": "https://www.sunriver.com.tw/images/hiking/G03_hiking.jpg",
+          "label": "郡大山．西巒大山"
+        }
+      ],
+      "elevationDiagramLinks": [
+        {
+          "url": "https://www.sunriver.com.tw/images/hiking/xG03-1.jpg",
+          "label": "郡大山"
+        },
+        {
+          "url": "https://www.sunriver.com.tw/images/hiking/xG03-2.jpg",
+          "label": "西巒大山"
+        }
+      ],
+      "attachmentContentChecked": false
+    },
+    {
+      "id": "G04",
+      "title": "聖稜 Y 型縱走",
+      "stepDiagramLinks": [
+        {
+          "url": "https://www.sunriver.com.tw/images/hiking/G04_hiking.jpg",
+          "label": "大霸．聖稜．四秀"
+        }
+      ],
+      "elevationDiagramLinks": [
+        {
+          "url": "https://www.sunriver.com.tw/images/hiking/xG04.jpg",
+          "label": "雪霸群峰"
+        }
+      ],
+      "attachmentContentChecked": false
+    },
+    {
+      "id": "G05",
+      "title": "雪山西・南稜縱走",
+      "stepDiagramLinks": [
+        {
+          "url": "https://www.sunriver.com.tw/images/hiking/G05_hiking.jpg",
+          "label": "雪山西．南稜"
+        }
+      ],
+      "elevationDiagramLinks": [
+        {
+          "url": "https://www.sunriver.com.tw/images/hiking/xG05-3.jpg",
+          "label": "大雪線"
+        },
+        {
+          "url": "https://www.sunriver.com.tw/images/hiking/xG05-2.jpg",
+          "label": "大小劍線"
+        },
+        {
+          "url": "https://www.sunriver.com.tw/images/hiking/xG05-1.jpg",
+          "label": "志佳陽"
+        }
+      ],
+      "attachmentContentChecked": false
+    },
+    {
+      "id": "G06",
+      "title": "白姑大山單登",
+      "stepDiagramLinks": [
+        {
+          "url": "https://www.sunriver.com.tw/images/hiking/G06_hiking.jpg",
+          "label": "白姑大山"
+        }
+      ],
+      "elevationDiagramLinks": [
+        {
+          "url": "https://www.sunriver.com.tw/images/hiking/xG06.jpg",
+          "label": "白姑大山"
+        }
+      ],
+      "attachmentContentChecked": false
+    },
+    {
+      "id": "G07",
+      "title": "北一段縱走",
+      "stepDiagramLinks": [
+        {
+          "url": "https://www.sunriver.com.tw/images/hiking/G07_hiking_new.jpg",
+          "label": "北一段"
+        },
+        {
+          "url": "https://www.sunriver.com.tw/images/hiking/G07_hiking_new3.jpg",
+          "label": "更新"
+        }
+      ],
+      "elevationDiagramLinks": [
+        {
+          "url": "https://www.sunriver.com.tw/images/hiking/xG07.jpg",
+          "label": "南湖群峰"
+        }
+      ],
+      "attachmentContentChecked": false
+    },
+    {
+      "id": "G08",
+      "title": "北二段縱走",
+      "stepDiagramLinks": [
+        {
+          "url": "https://www.sunriver.com.tw/images/hiking/G08_hiking.jpg",
+          "label": "畢祿羊頭．北二段"
+        }
+      ],
+      "elevationDiagramLinks": [
+        {
+          "url": "https://www.sunriver.com.tw/images/hiking/xG08-1.jpg",
+          "label": "畢祿羊頭縱走"
+        },
+        {
+          "url": "https://www.sunriver.com.tw/images/hiking/xG08-2.jpg",
+          "label": "北二段"
+        }
+      ],
+      "attachmentContentChecked": false
+    },
+    {
+      "id": "G09",
+      "title": "合歡・奇萊縱走",
+      "stepDiagramLinks": [
+        {
+          "url": "https://www.sunriver.com.tw/images/hiking/G09_hiking_new.jpg",
+          "label": "合歡.奇萊"
+        },
+        {
+          "url": "https://www.sunriver.com.tw/images/hiking/G09_hiking_new3.jpg",
+          "label": "更新"
+        }
+      ],
+      "elevationDiagramLinks": [
+        {
+          "url": "https://www.sunriver.com.tw/images/hiking/xG09-2.jpg",
+          "label": "合歡西北"
+        },
+        {
+          "url": "https://www.sunriver.com.tw/images/hiking/xG09-3.jpg",
+          "label": "奇萊"
+        },
+        {
+          "url": "https://www.sunriver.com.tw/images/hiking/xG09-1.jpg",
+          "label": "屏風山"
+        }
+      ],
+      "attachmentContentChecked": false
+    },
+    {
+      "id": "G10",
+      "title": "太魯閣山列（奇萊東稜）",
+      "stepDiagramLinks": [
+        {
+          "url": "https://www.sunriver.com.tw/images/hiking/G10_hiking.jpg",
+          "label": "太魯閣山列"
+        }
+      ],
+      "elevationDiagramLinks": [
+        {
+          "url": "https://www.sunriver.com.tw/images/hiking/xG10.jpg",
+          "label": "奇萊東稜"
+        }
+      ],
+      "attachmentContentChecked": false
+    },
+    {
+      "id": "G11",
+      "title": "能高越嶺",
+      "stepDiagramLinks": [
+        {
+          "url": "https://www.sunriver.com.tw/images/hiking/G11_hiking.jpg",
+          "label": "能高越嶺"
+        }
+      ],
+      "elevationDiagramLinks": [
+        {
+          "url": "https://www.sunriver.com.tw/images/hiking/xG11.jpg",
+          "label": "能高越嶺"
+        }
+      ],
+      "attachmentContentChecked": false
+    },
+    {
+      "id": "G12",
+      "title": "能高安東軍縱走",
+      "stepDiagramLinks": [
+        {
+          "url": "https://www.sunriver.com.tw/images/hiking/G12_hiking.jpg",
+          "label": "能高安東軍"
+        }
+      ],
+      "elevationDiagramLinks": [
+        {
+          "url": "https://www.sunriver.com.tw/images/hiking/xG12.jpg",
+          "label": "能高安東軍縱走"
+        }
+      ],
+      "attachmentContentChecked": false
+    },
+    {
+      "id": "G13",
+      "title": "干卓萬群峰縱走",
+      "stepDiagramLinks": [
+        {
+          "url": "https://www.sunriver.com.tw/images/hiking/G13_hiking.jpg",
+          "label": "干卓萬群峰"
+        }
+      ],
+      "elevationDiagramLinks": [
+        {
+          "url": "https://www.sunriver.com.tw/images/hiking/xG13.jpg",
+          "label": "干卓萬群峰"
+        }
+      ],
+      "attachmentContentChecked": false
+    },
+    {
+      "id": "G14",
+      "title": "七彩湖・六順山",
+      "stepDiagramLinks": [
+        {
+          "url": "https://www.sunriver.com.tw/images/hiking/G14_hiking.jpg",
+          "label": "丹大山列縱走"
+        }
+      ],
+      "elevationDiagramLinks": [
+        {
+          "url": "https://www.sunriver.com.tw/images/hiking/xG14.jpg",
+          "label": "七彩湖．六順山"
+        }
+      ],
+      "attachmentContentChecked": false
+    },
+    {
+      "id": "G15",
+      "title": "丹大・東郡橫斷縱走",
+      "stepDiagramLinks": [
+        {
+          "url": "https://www.sunriver.com.tw/images/hiking/G15_hiking.jpg",
+          "label": "丹大山．東郡"
+        }
+      ],
+      "elevationDiagramLinks": [
+        {
+          "url": "https://www.sunriver.com.tw/images/hiking/xG15.jpg",
+          "label": "丹大東郡橫斷"
+        }
+      ],
+      "attachmentContentChecked": false
+    },
+    {
+      "id": "G16",
+      "title": "馬博拉斯橫斷縱走",
+      "stepDiagramLinks": [
+        {
+          "url": "https://www.sunriver.com.tw/images/hiking/G16_hiking.jpg",
+          "label": "馬博拉斯橫斷縱走"
+        }
+      ],
+      "elevationDiagramLinks": [
+        {
+          "url": "https://www.sunriver.com.tw/images/hiking/xG16.jpg",
+          "label": "馬博拉斯橫斷"
+        }
+      ],
+      "attachmentContentChecked": false
+    },
+    {
+      "id": "G17",
+      "title": "南二段縱走",
+      "stepDiagramLinks": [
+        {
+          "url": "https://www.sunriver.com.tw/images/hiking/G17_hiking.jpg",
+          "label": "南二段縱走"
+        }
+      ],
+      "elevationDiagramLinks": [
+        {
+          "url": "https://www.sunriver.com.tw/images/hiking/xG17.jpg",
+          "label": "南二段"
+        }
+      ],
+      "attachmentContentChecked": false
+    },
+    {
+      "id": "G18",
+      "title": "新康橫斷縱走",
+      "stepDiagramLinks": [
+        {
+          "url": "https://www.sunriver.com.tw/images/hiking/G18_hiking.jpg",
+          "label": "新康橫斷縱走"
+        }
+      ],
+      "elevationDiagramLinks": [
+        {
+          "url": "https://www.sunriver.com.tw/images/hiking/xG18.jpg",
+          "label": "新康橫斷"
+        }
+      ],
+      "attachmentContentChecked": false
+    },
+    {
+      "id": "G19",
+      "title": "南一段縱走",
+      "stepDiagramLinks": [
+        {
+          "url": "https://www.sunriver.com.tw/images/hiking/G19_hiking.jpg",
+          "label": "南一段縱走"
+        }
+      ],
+      "elevationDiagramLinks": [
+        {
+          "url": "https://www.sunriver.com.tw/images/hiking/xG19.jpg",
+          "label": "南一段"
+        }
+      ],
+      "attachmentContentChecked": false
+    },
+    {
+      "id": "G20",
+      "title": "北大武山登峰",
+      "stepDiagramLinks": [
+        {
+          "url": "https://www.sunriver.com.tw/images/hiking/G20_hiking.jpg",
+          "label": "北大武山"
+        }
+      ],
+      "elevationDiagramLinks": [
+        {
+          "url": "https://www.sunriver.com.tw/images/hiking/xG20.jpg",
+          "label": "北大武山"
+        }
+      ],
+      "attachmentContentChecked": false
+    }
+  ]
+}

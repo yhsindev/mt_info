@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="282" height="64" viewBox="0 0 282 64" color="#ffffff" role="img" aria-labelledby="title"><title id="title">mt_info 地形指紋白色反白字標</title><g fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M13 51C3 43 10 29 20 23C29 18 30 8 40 10C53 12 60 25 56 38C52 52 41 57 28 54"/><path d="M21 48C12 42 19 32 29 27C36 24 35 16 43 19C51 23 51 32 47 40C43 47 36 49 30 46"/><path d="M29 38C25 34 33 31 37 30C41 28 40 25 44 28C48 32 41 40 36 40"/></g><g transform="translate(87 0)"><g fill="none" stroke="currentColor" stroke-width="4.4" stroke-linecap="round" stroke-linejoin="round">
+<path d="M0 47V24M0 32Q0 23 7 23Q14 23 14 32V47M14 32Q14 23 21 23Q28 23 28 32V47"/>
+<path d="M43 14V38Q43 47 51 47H54M35 25H54"/>
+<path d="M65 51H79"/>
+<path d="M92 25V47"/>
+<path d="M106 47V24M106 33Q106 23 116 23Q126 23 126 33V47"/>
+<path d="M142 47V23Q142 13 151 13H155M134 26H154"/>
+<path d="M169 35Q169 23 179 23Q189 23 189 35Q189 47 179 47Q169 47 169 35Z"/>
+</g><circle cx="92" cy="15" r="2.8" fill="currentColor"/></g></svg>

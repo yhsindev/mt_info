@@ -1,0 +1,73 @@
+/* The national map is the entry point; the list is a bounded companion view. */
+.equipment-overview { --overview-panel: 350px; }
+.equipment-overview .tool-rail { display: none; }
+.equipment-overview .information-panel { width: var(--overview-panel); min-width: var(--overview-panel); }
+.overview-title h1 { margin: 0; font-size: 26px; font-weight: 650; line-height: 1.4; letter-spacing: .5px; }
+.overview-count { display: block; color: #758579; font-size: 11px; margin-top: 4px; }
+.equipment-overview .panel-intro { padding: 22px 20px 18px; }
+.equipment-overview .region-row { margin-top: 12px; gap: 10px; }
+.equipment-overview .region-subtitle { margin-bottom: 16px; font-size: 11px; }
+.equipment-overview .search-field { min-height: 44px; }
+.equipment-overview .layer-tabs { padding: 0 20px; gap: 12px; }
+.equipment-overview .layer-tabs button { font-size: 12px; }
+.equipment-toolbar { padding: 12px 18px; background: #fbfcf9; border-bottom: 1px solid var(--line); }
+.equipment-toolbar .filter-chips { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; margin: 0; }
+.equipment-toolbar .filter-chips button { flex-wrap: wrap; column-gap: 4px; row-gap: 3px; padding: 7px 4px; min-height: 52px; font-size: 11px; color: #52685b; border-radius: 7px; }
+.equipment-toolbar .filter-chips button > span { flex-basis: 100%; font-size: 11px; opacity: .85; }
+.equipment-toolbar .filter-chips .filter-AED { color: #b24e2c; }
+.equipment-toolbar .filter-chips .filter-PAC { color: #2f705b; }
+.equipment-toolbar .filter-chips .filter-FIRST_AID { color: #326d95; }
+.equipment-toolbar .filter-chips .filter-AED.active { background: #fff0e9; border-color: #d59a83; }
+.equipment-toolbar .filter-chips .filter-PAC.active { background: #e8f4ee; border-color: #8bb8a5; }
+.equipment-toolbar .filter-chips .filter-FIRST_AID.active { background: #eaf3fb; border-color: #91b4d0; }
+.equipment-icon.type-AED { color: #c45b37; background: #fff0e9; }
+.equipment-icon.type-PAC { color: #39816a; background: #e8f4ee; }
+.equipment-icon.type-FIRST_AID { color: #3b78a1; background: #eaf3fb; }
+.equipment-overview .panel-content { padding: 18px 20px; }
+.equipment-overview .section-heading { margin-bottom: 10px; }
+.coverage-note { margin: 0 0 16px; color: #7b887a; font-size: 11px; line-height: 1.85; }
+.coordinate-summary { display: flex; align-items: flex-start; gap: 5px; font-size: 11px; color: #8b7657; margin: 0 0 14px; line-height: 1.7; }
+.equipment-pagination { display: flex; flex-direction: column; align-items: center; gap: 8px; margin-top: 16px; padding: 14px 8px; border: 1px dashed #dbe4d7; border-radius: 8px; }
+.equipment-pagination p { font-size: 11px; margin: 0; color: #758371; }
+.equipment-pagination button { min-height: 44px; font-size: 12px; }
+.equipment-pagination small { font-size: 10px; text-align: center; color: #889480; line-height: 1.7; }
+.overview-data-notice { position: absolute; z-index: 2; left: calc(var(--overview-panel) + 24px); bottom: 112px; display: flex; align-items: center; gap: 8px; padding: 10px 12px; max-width: calc(100% - var(--overview-panel) - 90px); background: #fffffff2; border: 1px solid #dce5d6; border-radius: 7px; color: #5d7655; font-size: 12px; line-height: 1.7; box-shadow: 0 3px 16px #2743340c; }
+.overview-data-notice.warning { color: #8a6c3d; background: #fff9edf5; border-color: #e7d6b7; }
+.overview-data-notice button { min-width: 44px; min-height: 44px; display: grid; place-items: center; }
+@media (max-width: 1100px) and (min-width: 761px) {
+  .equipment-overview { --overview-panel: 330px; }
+}
+@media (max-width: 760px) {
+  .equipment-overview .information-panel { width: 100%; min-width: 0; }
+  .equipment-overview .information-panel.collapsed { top: calc(100% - 232px); }
+  .equipment-overview .mobile-handle { height: 28px; min-height: 28px; }
+  .equipment-overview .mobile-handle button { height: 44px; }
+  .equipment-overview .panel-intro,
+  .equipment-overview .information-panel.collapsed .panel-intro { padding: 0 14px 8px; }
+  .equipment-overview .panel-intro .region-row,
+  .equipment-overview .information-panel.collapsed .region-row { margin: 0 0 8px; min-height: 44px; gap: 8px; }
+  .equipment-overview .overview-title { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+  .equipment-overview .overview-title h1 { font-size: 20px; letter-spacing: .2px; }
+  .equipment-overview .overview-count { font-size: 10px; margin-top: 0; }
+  .equipment-overview .information-panel.collapsed .search-field { display: flex; }
+  .equipment-overview .search-field { height: 44px; padding: 0 11px; }
+  .equipment-overview .search-field input { font-size: 16px; }
+  .equipment-overview .search-field input::placeholder { font-size: 12px; }
+  .equipment-overview .search-field button { width: 32px; height: 40px; }
+  .equipment-overview .layer-tabs { min-height: 44px; padding: 0 14px; gap: 16px; }
+  .equipment-overview .layer-tabs button { min-height: 44px; padding: 8px 0; }
+  .equipment-overview .equipment-toolbar { padding: 6px 14px; }
+  .equipment-overview .equipment-toolbar .filter-chips { gap: 6px; }
+  .equipment-overview .equipment-toolbar .filter-chips button { flex-wrap: nowrap; min-height: 44px; padding: 7px 4px; font-size: 12px; }
+  .equipment-overview .equipment-toolbar .filter-chips button > span { display: none; }
+  .equipment-overview .panel-content { padding: 16px; }
+  .equipment-overview:has(.information-panel.collapsed) .mobile-view-toggle { top: auto; bottom: 274px; min-height: 44px; font-size: 11px; }
+  .equipment-overview .overview-data-notice { left: 14px; bottom: 244px; max-width: calc(100% - 175px); font-size: 11px; padding: 6px 9px; }
+  .equipment-overview:has(.information-panel.expanded) .overview-data-notice { bottom: auto; top: 107px; max-width: calc(100% - 78px); }
+  .equipment-overview .equipment-pagination button { width: 100%; justify-content: center; }
+}
+@media (max-width: 380px) {
+  .equipment-overview .overview-title { gap: 5px; }
+  .equipment-overview .overview-title h1 { font-size: 18px; }
+  .equipment-overview .overview-count { font-size: 9px; }
+}

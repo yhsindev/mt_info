@@ -1,0 +1,84 @@
+.rain-map-canvas.rain-official-page {
+  overflow: auto;
+  overscroll-behavior: contain;
+}
+.ncdr-mpas-viewer {
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+  min-width: 0;
+  background: #fff;
+  color: #355b4b;
+}
+.ncdr-mpas-source {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 18px 10px;
+}
+.ncdr-mpas-source strong { font-size: var(--text-body); font-weight: 600; }
+.ncdr-mpas-source p { margin: 5px 0 0; font-size: var(--text-body); line-height: 1.65; color: var(--color-muted); }
+.ncdr-mpas-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; flex-shrink: 0; }
+.ncdr-mpas-actions a,
+.ncdr-mpas-actions button,
+.ncdr-mpas-size-controls button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: var(--control-height);
+  border: 1px solid #b9ccbd;
+  border-radius: 6px;
+  padding: 8px 12px;
+  background: #fff;
+  color: #315e48;
+  font: inherit;
+  font-size: var(--text-control);
+  line-height: 1.4;
+  text-decoration: none;
+  cursor: pointer;
+}
+.ncdr-mpas-actions button:disabled { opacity: 1; color: var(--color-muted); background: var(--color-surface); cursor: not-allowed; }
+.ncdr-mpas-actions a:hover,
+.ncdr-mpas-actions button:enabled:hover,
+.ncdr-mpas-size-controls button:hover { background: #f0f5ee; }
+.ncdr-mpas-viewer :is(a, button):focus-visible { outline: 3px solid #3b78a1; outline-offset: 2px; }
+.ncdr-mpas-size-controls { display: flex; gap: 6px; padding: 0 18px; }
+.ncdr-mpas-size-controls button[aria-pressed="true"] { background: #315e48; border-color: #315e48; color: #fff; }
+.ncdr-mpas-hint { margin: 8px 18px 4px; font-size: var(--text-body); line-height: 1.65; color: var(--color-muted); }
+.ncdr-mpas-status { display: flex; align-items: flex-start; gap: 7px; margin: 8px 18px; font-size: var(--text-body); line-height: 1.65; color: var(--color-muted); }
+.ncdr-mpas-status > svg,
+.ncdr-mpas-limitation > svg { flex-shrink: 0; margin-top: 3px; }
+.ncdr-mpas-status-warning { padding: 9px 11px; margin-top: 5px; border: 1px solid #e0cda4; border-radius: 6px; background: #fff9eb; color: #775723; }
+.ncdr-mpas-viewport {
+  position: relative;
+  box-sizing: content-box;
+  flex-shrink: 0;
+  height: 720px;
+  min-height: 720px;
+  width: 100%;
+  overflow: hidden;
+  border-top: 1px solid #d7e1d7;
+  border-bottom: 1px solid #d7e1d7;
+  background: #fff;
+}
+.ncdr-mpas-frame { display: block; border: 0; transform-origin: left top; max-width: none; }
+.ncdr-mpas-unavailable { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; min-height: 720px; padding: 24px; text-align: center; color: var(--color-muted); background: #f5f8f2; }
+.ncdr-mpas-unavailable p { max-width: 350px; margin: 0; line-height: 1.8; }
+.ncdr-mpas-limitation { display: flex; align-items: flex-start; gap: 7px; margin: 12px 18px 16px; font-size: var(--text-body); line-height: 1.7; color: var(--color-muted); }
+@media (max-width: 1050px) {
+  .ncdr-mpas-source { align-items: flex-start; flex-direction: column; gap: 9px; }
+}
+@media (max-width: 760px) {
+  .rain-map-workspace .rain-map-canvas.rain-official-page { height: auto; min-height: 1000px; overflow: visible; }
+  .ncdr-mpas-source { padding: 13px 14px 10px; }
+  .ncdr-mpas-actions { width: 100%; }
+  .ncdr-mpas-actions a,
+  .ncdr-mpas-actions button { flex: 1; padding: 8px; }
+  .ncdr-mpas-size-controls { padding: 0 14px; }
+  .ncdr-mpas-size-controls button { flex: 1; }
+  .ncdr-mpas-hint { margin-right: 14px; margin-left: 14px; }
+  .ncdr-mpas-status { margin-right: 14px; margin-left: 14px; }
+  .ncdr-mpas-limitation { margin-right: 14px; margin-left: 14px; }
+}

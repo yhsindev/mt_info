@@ -1,0 +1,27 @@
+.sc-rest{padding:8px 0 36px}
+.sc-rest h1{font-size:36px;line-height:1.3;letter-spacing:-.025em;color:var(--color-ink);margin-bottom:10px}
+.sc-rest-intro{font-size:17px;line-height:1.7;color:var(--color-text);margin-bottom:30px}
+.sc-rest-layout{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(280px,.85fr);gap:28px;align-items:start}
+.sc-bingo,.sc-songs{border:1px solid var(--color-border);border-radius:6px;background:#fffefa;padding:24px}
+.sc-bingo-head{display:flex;justify-content:space-between;align-items:start;gap:16px}
+.sc-bingo-head .sc-eyebrow,.sc-songs .sc-eyebrow{margin-bottom:6px}
+.sc-bingo h2,.sc-songs h2{font-size:23px;line-height:1.4;color:var(--color-ink);margin:0}
+.sc-bingo>p,.sc-songs>p{font-size:15px;line-height:1.7;color:var(--color-muted);margin-top:12px}
+.sc-bingo-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:20px}
+.sc-bingo-grid button{display:flex;flex-direction:column;justify-content:space-between;gap:8px;min-height:126px;padding:14px;text-align:left;border:1px solid #cbd4c6;border-radius:4px;background:#f4f5ef;transition:background .15s,border-color .15s}
+.sc-bingo-grid button:hover{border-color:var(--color-brand)}
+.sc-bingo-grid button.is-marked{background:#dfe9de;border-color:var(--color-brand)}
+.sc-bingo-grid button.is-winning{background:#cbdcc7;border-color:#345f4b}
+.sc-bingo-grid button span{font:13px Georgia,serif;color:var(--color-muted)}
+.sc-bingo-grid button strong{font-size:16px;line-height:1.55;font-weight:600;color:var(--color-ink)}
+.sc-bingo-grid button.is-marked strong:before{content:'✓';margin-right:4px;color:var(--color-brand)}
+.sc-bingo .sc-bingo-status{color:var(--color-brand);font-weight:600;min-height:26px}
+.sc-songs ul{list-style:none;padding:0;margin:20px 0 0;border-top:1px solid var(--color-border)}
+.sc-songs li{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:17px 0;border-bottom:1px solid var(--color-border)}
+.sc-songs li strong,.sc-songs li small{display:block}
+.sc-songs li strong{font-size:18px;color:var(--color-ink);line-height:1.5}
+.sc-songs li small{font-size:14px;line-height:1.6;color:var(--color-muted);margin-top:2px}
+.sc-songs li a{display:inline-flex;align-items:center;gap:3px;flex:none;min-height:48px;padding:5px;color:var(--color-brand);font-size:15px;text-decoration:underline;text-underline-offset:4px}
+.sc-songs .sc-songs-online{font-size:14px;margin-top:16px}
+@media(max-width:850px){.sc-rest-layout{grid-template-columns:1fr}.sc-songs{max-width:none}}
+@media(max-width:760px){.sc-nav{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px}.sc-nav button{padding:8px 2px;font-size:15px;white-space:nowrap;gap:4px}.sc-nav button>svg,.sc-nav .sc-count{display:none}.sc-rest{padding:0 0 20px}.sc-rest h1{font-size:30px}.sc-rest-intro{font-size:16px;margin-bottom:20px}.sc-rest-layout{gap:16px}.sc-bingo,.sc-songs{padding:16px}.sc-bingo-head{align-items:center}.sc-bingo h2,.sc-songs h2{font-size:20px}.sc-bingo-grid{gap:5px;margin-top:16px}.sc-bingo-grid button{min-height:112px;padding:10px;gap:5px}.sc-bingo-grid button strong{font-size:14px;line-height:1.4}.sc-songs li{gap:8px}}

@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>計畫通工作區・介面研究 | mt_info</title>
+  <style>
+    :root{--ink:#1e2721;--text:#334238;--muted:#58695d;--green:#254b3f;--canvas:#fbfaf6;--surface:#edf2e9;--border:#cbd4c6;--focus:#276593;--warning:#85551f;font-family:-apple-system,BlinkMacSystemFont,'PingFang TC','Microsoft JhengHei',sans-serif;color:var(--text);background:var(--canvas);font-size:18px;line-height:1.7}
+    *{box-sizing:border-box}body{margin:0}button,input,select{font:inherit;color:inherit}button,a,input{touch-action:manipulation}button{cursor:pointer}button,input,select{min-height:48px}button{background:white;border:1px solid var(--border);border-radius:6px;padding:9px 15px;font-size:16px}button:hover{background:var(--surface)}button[aria-pressed=true]{background:var(--green);border-color:var(--green);color:white}button:focus-visible,input:focus-visible,select:focus-visible,a:focus-visible{outline:3px solid var(--focus);outline-offset:3px}a{color:var(--green)}h1,h2,h3,p{margin:0}h1,h2,h3{color:var(--ink)}small,.meta{font-size:16px;color:var(--muted)}.masthead{height:80px;display:flex;align-items:center;justify-content:space-between;padding:0 36px;border-bottom:1px solid var(--border);background:white;gap:20px}.brand{display:flex;align-items:center;gap:12px;color:var(--green);font:700 28px Georgia,serif;letter-spacing:-1.5px}.brand img{width:34px;height:34px}.study-label{font-size:16px;color:var(--muted)}main{max-width:1440px;margin:auto;padding:30px 36px 50px}.breadcrumb{font-size:16px;color:var(--muted);margin-bottom:14px}.heading{display:flex;justify-content:space-between;align-items:center;gap:24px}.heading h1{font-size:36px;letter-spacing:-.04em;line-height:1.35}.heading p{margin-top:8px}.exports{display:flex;gap:8px;flex-wrap:wrap}.notice{margin:24px 0 20px;padding:12px 16px;border-left:3px solid #9a7841;background:#f5f0e5;font-size:16px;color:#6e512c}.notice strong{font-weight:650}.daybar{display:flex;align-items:center;justify-content:space-between;gap:16px;border-bottom:1px solid var(--border);padding-bottom:18px;margin-bottom:24px}.days{display:flex;gap:8px;flex-wrap:wrap}.view-switch{display:none}.workspace{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:36px;align-items:start}.itinerary,.diagram-panel{min-width:0}.section-top{display:flex;align-items:start;justify-content:space-between;gap:14px;margin-bottom:16px}.section-top h2{font-size:26px;letter-spacing:-.03em}.date-meta{margin-bottom:20px}.start-control{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:22px}.start-control input{width:136px;font-size:18px;border:1px solid var(--border);border-radius:6px;padding:8px 12px;background:white}.arrival{font-size:16px;color:var(--muted)}.arrival b{font-size:20px;color:var(--ink);margin-left:8px;font-variant-numeric:tabular-nums}.timeline{list-style:none;padding:0;margin:0}.stop{position:relative;padding-left:36px;border-left:2px solid var(--border);margin-left:77px;padding-bottom:14px}.stop:last-child{border-color:transparent;padding-bottom:0}.stop:before{content:'';position:absolute;left:-8px;top:21px;border:2px solid var(--green);width:12px;height:12px;background:var(--canvas);border-radius:50%}.stop.is-selected:before{background:var(--green)}.stop-time{position:absolute;left:-79px;top:14px;width:62px;font-weight:650;font-size:18px;font-variant-numeric:tabular-nums;color:var(--ink)}.stop-button{display:block;text-align:left;width:100%;border-color:transparent;background:transparent;padding:8px 10px;margin-left:-10px;min-height:48px;font-weight:650;font-size:20px}.stop-button[aria-pressed=true]{background:var(--surface);border-color:var(--border);color:var(--green)}.tags{display:flex;gap:8px;flex-wrap:wrap;margin:7px 0 9px}.tag{font-size:14px;border:1px solid var(--border);border-radius:4px;padding:1px 8px;background:white}.stop-detail{background:white;border:1px solid var(--border);padding:14px 16px;margin:10px 0 14px;border-radius:6px;font-size:16px}.stop-detail strong{display:block;color:var(--ink);margin-bottom:4px}.stop-detail p{margin-bottom:7px}.stop-detail p:last-child{margin-bottom:0}.leg{padding:10px 0 21px}.leg-source{font-size:16px;color:var(--muted);margin-bottom:10px}.leg-fields{display:flex;gap:12px}.leg-fields label{display:flex;flex-direction:column;gap:5px;font-size:14px;flex:1;min-width:0}.leg-fields input{width:100%;min-width:0;border:1px solid var(--border);border-radius:6px;background:white;padding:8px 12px;font-size:18px}.checks{border-top:1px solid var(--border);padding-top:22px;margin-top:24px}.checks h3{font-size:20px;margin-bottom:8px}.checks p{font-size:16px}.diagram-panel{position:sticky;top:24px;background:white;border:1px solid var(--border);border-radius:6px;padding:22px}.diagram-panel h2{font-size:23px;line-height:1.4}.diagram-panel .section-top{margin-bottom:10px}.schematic{display:block;width:100%;height:auto;max-height:540px;overflow:visible}.schematic .segment{stroke:#abbcaf;stroke-width:3;fill:none}.schematic .segment.is-day{stroke:var(--green);stroke-width:5}.schematic .node{cursor:pointer}.schematic .node circle{fill:white;stroke:var(--green);stroke-width:2}.schematic .node.is-selected circle{fill:var(--green);stroke-width:4}.schematic .node text{font-size:17px;fill:var(--green);font-weight:600}.schematic .node.is-selected text.number{fill:white}.schematic .node .point-name{font-size:18px;fill:var(--ink);font-weight:500}.schematic .node:focus{outline:none}.schematic .node:focus-visible circle{stroke:var(--focus);stroke-width:6}.diagram-caption{border-top:1px solid var(--border);padding-top:14px;font-size:16px}.diagram-caption strong{display:block;margin-bottom:3px}.diagram-caption p{margin-bottom:5px}.diagram-foot{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}.diagram-foot span{font-size:14px;color:var(--muted);display:flex;align-items:center;gap:6px}.swatch{width:22px;height:3px;background:var(--green)}.swatch.other{background:#abbcaf}details.notes{margin-top:28px;padding:18px 0;border-top:1px solid var(--border)}details.notes summary{font-size:20px;font-weight:650;cursor:pointer;min-height:48px}details.notes p{margin:12px 0;font-size:16px;max-width:75ch}.status{font-size:16px;color:var(--muted);min-height:28px;margin-top:18px}.mobile-context{display:none}.empty{color:var(--warning)}
+    @media(max-width:1000px){main{padding:26px 24px}.workspace{gap:24px}.heading{align-items:start}.heading h1{font-size:32px}.exports{max-width:200px}.diagram-panel{padding:18px}.stop{padding-left:24px;margin-left:70px}.stop-time{left:-72px}.schematic .node .point-name{font-size:19px}}
+    @media(max-width:760px){:root{font-size:16px;line-height:1.75}.masthead{height:64px;padding:0 18px}.brand{font-size:28px;gap:8px}.brand img{width:30px;height:30px}.study-label{font-size:14px}main{padding:22px 18px 32px}.breadcrumb{font-size:14px}.heading{display:block}.heading h1{font-size:30px}.heading p{font-size:14px}.exports{max-width:none;margin-top:18px}.exports button{font-size:15px}.notice{font-size:14px;margin:18px 0;padding:10px 12px}.daybar{display:block;padding-bottom:16px;margin-bottom:20px}.days{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.days button{font-size:15px;padding:8px 5px}.view-switch{display:flex;margin-top:12px;gap:8px}.view-switch button{flex:1;font-size:15px}.workspace{display:block}.workspace[data-view=timeline] .diagram-panel{display:none}.workspace[data-view=map] .itinerary{display:none}.section-top h2{font-size:24px}.section-top small,.meta{font-size:14px}.start-control{gap:10px}.start-control input{font-size:16px;width:130px}.arrival{font-size:14px}.arrival b{font-size:18px}.stop{margin-left:66px;padding-left:23px}.stop-time{font-size:16px;left:-68px;top:16px}.stop-button{font-size:19px}.leg-fields input{font-size:16px}.leg-source,.stop-detail{font-size:14px}.diagram-panel{position:static;padding:16px}.diagram-panel h2{font-size:22px}.diagram-caption{font-size:14px}.diagram-foot span{font-size:14px}.checks h3{font-size:19px}.checks p,.status{font-size:14px}.mobile-context{display:block;font-size:14px;margin-bottom:14px;color:var(--muted)}details.notes summary{font-size:19px}details.notes p{font-size:14px}small{font-size:14px}}
+    .start-control input{width:180px;flex-shrink:0}
+    .schematic .node .point-name{font-size:24px}
+    .schematic .node text.number{font-size:23px}
+    .schematic .node .hit{fill:transparent!important;stroke:none!important;pointer-events:all}
+    .point-picker{display:flex;flex-direction:column;gap:6px;font-size:16px;margin:12px 0 18px}
+    .point-picker select{min-width:0;width:100%;background:white;border:1px solid var(--border);border-radius:6px;padding:8px 12px;font-size:16px}
+    @media(max-width:760px){.schematic .node .point-name{display:none}.schematic .node circle:not(.hit){r:27px}.schematic .node text.number{font-size:34px}.point-picker{font-size:14px}}
+    @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+  </style>
+</head>
+<body>
+  <header class="masthead"><div class="brand"><img src="../../public/brand/mt-info-symbol.svg" alt="">mt_info</div><span class="study-label">計畫通・介面研究</span></header>
+  <main>
+    <p class="breadcrumb">工作區提案 / 2026.10.24</p>
+    <div class="heading"><div><h1>溪谷・駐在所縱走</h1><p class="meta">3 日 · 多日中級山 · 虛構路線</p></div><div class="exports"><button id="export-white" type="button">白底 SVG</button><button id="export-transparent" type="button">透明 PNG</button></div></div>
+    <p class="notice"><strong>介面示範，非實際登山路線。</strong>路點、分鐘與圖形皆為虛構；本頁不讀寫既有草稿。右圖是路點關係示意，沒有真實座標、方位或比例尺。</p>
+    <div class="daybar"><nav class="days" aria-label="選擇行程日期"></nav><div class="view-switch" aria-label="手機檢視"><button type="button" data-view="timeline" aria-pressed="true">行程</button><button type="button" data-view="map" aria-pressed="false">圖面配置</button></div></div>
+    <div class="workspace" data-view="timeline">
+      <section class="itinerary" aria-labelledby="day-title"><div class="section-top"><h2 id="day-title"></h2><small id="day-load"></small></div><p class="date-meta meta" id="day-description"></p><div class="start-control"><label for="start">出發時間</label><input id="start" type="time"><span class="arrival">抵達 <b id="finish"></b></span></div><ol class="timeline"></ol><div class="checks"><h3>當日待確認</h3><p id="day-check"></p></div></section>
+      <section class="diagram-panel" aria-labelledby="diagram-title"><div class="section-top"><h2 id="diagram-title">路線與路點</h2><small>配置示意</small></div><p class="mobile-context">選取路點後，切回「行程」可調整分鐘。</p><div id="diagram"></div><label class="point-picker" for="point-select">選取路點<select id="point-select"></select></label><div class="diagram-caption" aria-live="polite"><strong id="selected-name"></strong><p id="selected-info"></p><p class="meta">正式版此處使用有來源的軌跡與地圖；缺座標的節點保留在時序中。</p></div><div class="diagram-foot"><span><i class="swatch"></i>當日行程</span><span><i class="swatch other"></i>其他日期</span><span>數字對應時序路點</span></div></section>
+    </div>
+    <details class="notes"><summary>提案範圍與操作</summary><p>可以切換日期、點選路點、修改出發／移動／休息時間，或清空一段時間觀察後續抵達保留「未定」。圖面上的路點也會選取對應日期；手機在兩種檢視之間保留狀態。</p><p>示範值僅在本頁記憶體內；重新整理即還原。下載只輸出當下的示意圖與「虛構路線」標記，不包含既有計畫、聯絡資料或地圖底圖。正式版的儲存、計畫書、授權軌跡與來源附錄沿用現有系統另行整合。</p><p><a href="PLAN_WORKSPACE_2026-10-24.md">查看研究與分階段建議</a></p></details>
+    <p class="status" role="status" id="status">未連接資料來源 · 不保存本頁編輯</p>
+  </main>
+  <script>
+    const nodes = [
+      {name:'登山口 A',x:95,y:615,kind:'起點',note:'出發位置需有可核對座標。',check:'待補接駁與進出許可。'},
+      {name:'溪谷路口 B',x:155,y:480,kind:'取水紀錄',note:'水況未知；尚無回報日期。',check:'待補主備水源、日期與來源。'},
+      {name:'稜線岔路 C',x:310,y:530,kind:'決策點',note:'撤退方案尚未人工核對。',check:'待填折返時間與觸發條件。'},
+      {name:'溪谷宿營地 D',x:345,y:370,kind:'預定住宿',note:'宿營許可未知；不是核准營地。',check:'待核對住宿許可與備案。'},
+      {name:'駐在所遺址 E',x:195,y:315,kind:'歷史路點',note:'名稱、位置與進出條件待核。',check:'待補合法來源與路點位置。'},
+      {name:'鞍部 F',x:270,y:190,kind:'困難路段',note:'地形、季節與所需技術待查。',check:'待補攀爬、渡溪或架繩等實際條件。'},
+      {name:'稜線宿營地 G',x:425,y:110,kind:'預定住宿',note:'宿營許可未知；備用水源未填。',check:'待核對宿營與取水方案。'},
+      {name:'舊道岔口 H',x:515,y:280,kind:'決策點',note:'舊道是否可通行尚未確認。',check:'待補近期路況與撤退紀錄。'},
+      {name:'出口 I',x:535,y:470,kind:'終點',note:'報平安與接駁時間待填。',check:'待補接駁、留守與超時處置。'}
+    ];
+    const days = [
+      {name:'進入溪谷',description:'登山口 A → 溪谷宿營地 D',load:'全裝',start:'06:30',stops:[0,1,2,3],reference:[70,90,80],move:[90,110,100],rest:[10,20,0]},
+      {name:'越嶺與遺址',description:'溪谷宿營地 D → 稜線宿營地 G',load:'全裝',start:'06:00',stops:[3,4,5,6],reference:[100,null,100],move:[120,null,120],rest:[15,20,0]},
+      {name:'循舊道下山',description:'稜線宿營地 G → 出口 I',load:'全裝',start:'07:00',stops:[6,7,8],reference:[90,100],move:[110,120],rest:[15,0]}
+    ];
+    let activeDay=0, selected=0;
+    const lastSelection=[0,3,6];
+    const $=s=>document.querySelector(s);
+    const escapeXml=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&apos;'}[c]));
+    function format(minute){
+      if(minute===null)return '未定';
+      const day=Math.floor(minute/1440),hour=Math.floor(minute%1440/60),m=minute%60;
+      return `${day?(day===1?'次日 ':`第 ${day+1} 日 `):''}${String(hour).padStart(2,'0')}:${String(m).padStart(2,'0')}`;
+    }
+    function timing(day){
+      let minute=day.start?Number(day.start.slice(0,2))*60+Number(day.start.slice(3)):null;
+      const points=[minute];
+      day.move.forEach((move,i)=>{minute=minute===null||move===null?null:minute+move;points.push(minute);minute=minute===null||day.rest[i]===null?null:minute+day.rest[i]});
+      return {points,finish:minute};
+    }
+    function selectPoint(index,fromDiagram=false){
+      if(!days[activeDay].stops.includes(index))activeDay=days.findIndex(d=>d.stops.includes(index));
+      selected=index;lastSelection[activeDay]=index;render();
+      if(!fromDiagram)$(`[data-stop="${index}"] .stop-button`)?.focus({preventScroll:true});
+    }
+    function diagramSvg(transparent=false,exporting=false){
+      const day=days[activeDay];
+      const edges=nodes.slice(1).map((n,i)=>`<path class="segment${day.stops.includes(i)&&day.stops.includes(i+1)?' is-day':''}" d="M${nodes[i].x},${nodes[i].y} L${n.x},${n.y}" stroke="${day.stops.includes(i)&&day.stops.includes(i+1)?'#254b3f':'#abbcaf'}" stroke-width="${day.stops.includes(i)&&day.stops.includes(i+1)?5:3}" fill="none"/>`).join('');
+      const dots=nodes.map((n,i)=>`<g class="node${i===selected?' is-selected':''}" ${exporting?'':`role="button" tabindex="0" aria-label="路點 ${i+1} ${n.name}" aria-pressed="${i===selected}" data-node="${i}"`}>${exporting?'':`<circle class="hit" cx="${n.x}" cy="${n.y}" r="55" fill="transparent"/>`}<circle cx="${n.x}" cy="${n.y}" r="19" fill="${i===selected?'#254b3f':'#fff'}" stroke="#254b3f" stroke-width="2"/><text class="number" x="${n.x}" y="${n.y+7}" text-anchor="middle" fill="${i===selected?'#fff':'#254b3f'}" font-size="23" font-weight="600">${i+1}</text><text class="point-name" x="${n.x+(n.x>430?-30:30)}" y="${n.y-26}" text-anchor="${n.x>430?'end':'start'}" fill="#1e2721" font-size="24">${escapeXml(n.name)}</text></g>`).join('');
+      return `<svg xmlns="http://www.w3.org/2000/svg" class="schematic" viewBox="0 0 640 760" width="640" height="760" ${exporting?'': 'role="group" aria-label="虛構路線關係示意，非導航地圖"'} font-family="sans-serif">${transparent?'':'<rect width="640" height="760" fill="#fff"/>'}<text x="35" y="35" font-size="21" font-weight="600" fill="#254b3f">溪谷・駐在所縱走 / 第 ${activeDay+1} 天</text><text x="35" y="64" font-size="16" fill="#58695d">虛構路線 · 路點關係示意 · 無真實座標</text>${edges}${dots}<path d="M35 682H605" stroke="#cbd4c6"/><text x="35" y="713" font-size="16" fill="#58695d">mt_info / 介面研究・不可用於導航</text><text x="35" y="740" font-size="14" fill="#58695d">圖形不表示方向、距離、高程或實際可通行狀態</text></svg>`;
+    }
+    function updateTimes(){
+      const time=timing(days[activeDay]);
+      $('#finish').textContent=format(time.finish);
+      document.querySelectorAll('.stop-time').forEach((el,i)=>{el.textContent=format(time.points[i]);el.classList.toggle('empty',time.points[i]===null)});
+    }
+    function render(){
+      const day=days[activeDay],time=timing(day);
+      $('.days').innerHTML=days.map((d,i)=>`<button type="button" data-day="${i}" aria-pressed="${i===activeDay}">第 ${i+1} 天</button>`).join('');
+      $('.days').querySelectorAll('button').forEach(b=>b.onclick=()=>{activeDay=Number(b.dataset.day);selected=lastSelection[activeDay];render();$(`[data-day="${activeDay}"]`).focus({preventScroll:true})});
+      $('#day-title').textContent=day.name;$('#day-load').textContent=day.load;$('#day-description').textContent=day.description;$('#start').value=day.start;
+      $('.timeline').innerHTML=day.stops.map((id,i)=>{
+        const node=nodes[id],hasLeg=i<day.stops.length-1;
+        return `<li class="stop${id===selected?' is-selected':''}" data-stop="${id}"><span class="stop-time">${format(time.points[i])}</span><button type="button" class="stop-button" aria-pressed="${id===selected}" aria-controls="point-detail-${id}">${id+1}. ${node.name}</button><div class="tags"><span class="tag">${node.kind}</span><span class="tag">${id===1?'水況未知':id===3||id===6?'許可待核':'資料待補'}</span></div><div class="stop-detail" id="point-detail-${id}" ${id===selected?'':'hidden'}><strong>${node.note}</strong><p>${node.check}</p><p class="meta">來源：虛構介面樣本，沒有實地查核紀錄。</p></div>${hasLeg?`<div class="leg"><p class="leg-source">參考：${day.reference[i]===null?'未收錄':'示範 '+day.reference[i]+' 分'} → ${nodes[day.stops[i+1]].name}</p><div class="leg-fields"><label>本隊移動（分）<input type="number" min="0" max="1440" step="1" inputmode="numeric" value="${day.move[i]??''}" placeholder="未定" data-kind="move" data-leg="${i}"></label><label>休息（分）<input type="number" min="0" max="1440" step="1" inputmode="numeric" value="${day.rest[i]??''}" placeholder="未定" data-kind="rest" data-leg="${i}"></label></div></div>`:''}</li>`;
+      }).join('');
+      $('.timeline').querySelectorAll('.stop-button').forEach(b=>b.onclick=()=>selectPoint(Number(b.closest('.stop').dataset.stop)));
+      $('.timeline').querySelectorAll('input').forEach(input=>input.oninput=()=>{
+        const raw=input.value,value=input.valueAsNumber;
+        day[input.dataset.kind][Number(input.dataset.leg)]=raw!==''&&Number.isInteger(value)&&value>=0&&value<=1440?value:null;
+        updateTimes();$('#status').textContent='示範時程已重算 · 未填時間保留未定 · 不保存本頁編輯';
+      });
+      $('#day-check').textContent='水源回報日期、宿營許可、困難路段條件、撤退路線與留守安排。';
+      $('#diagram').innerHTML=diagramSvg();
+      $('#diagram').querySelectorAll('[data-node]').forEach(n=>{
+        n.onclick=()=>selectPoint(Number(n.dataset.node),true);
+        n.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();const index=Number(n.dataset.node);selectPoint(index,true);$(`[data-node="${index}"]`)?.focus()}};
+      });
+      $('#point-select').innerHTML=nodes.map((n,i)=>`<option value="${i}">${i+1}. ${n.name}</option>`).join('');$('#point-select').value=String(selected);
+      $('#selected-name').textContent=`${selected+1}. ${nodes[selected].name}`;$('#selected-info').textContent=nodes[selected].note;
+      updateTimes();
+    }
+    $('#start').oninput=()=>{days[activeDay].start=$('#start').value;updateTimes()};
+    $('#point-select').onchange=()=>{selectPoint(Number($('#point-select').value),true);$('#point-select').focus({preventScroll:true})};
+    document.querySelectorAll('.view-switch button').forEach(b=>b.onclick=()=>{
+      $('.workspace').dataset.view=b.dataset.view;
+      document.querySelectorAll('.view-switch button').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));
+    });
+    function download(blob,name){const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=name;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000)}
+    $('#export-white').onclick=()=>{
+      download(new Blob([diagramSvg(false,true)],{type:'image/svg+xml;charset=utf-8'}),'mt_info-虛構路線-示意圖.svg');
+      $('#status').textContent='已產生白底示意圖 · 含虛構路線標記 · 不含真實軌跡';
+    };
+    $('#export-transparent').onclick=async()=>{
+      const button=$('#export-transparent');button.disabled=true;
+      const svgUrl=URL.createObjectURL(new Blob([diagramSvg(true,true)],{type:'image/svg+xml;charset=utf-8'}));
+      try{
+        const image=new Image();image.src=svgUrl;await image.decode();
+        const canvas=document.createElement('canvas');canvas.width=1280;canvas.height=1520;
+        canvas.getContext('2d').drawImage(image,0,0,1280,1520);
+        const blob=await new Promise(resolve=>canvas.toBlob(resolve,'image/png'));
+        if(!blob)throw new Error('PNG 產生失敗');
+        download(blob,'mt_info-虛構路線-透明示意圖.png');$('#status').textContent='已產生透明示意圖 · 含虛構路線標記 · 不含真實軌跡';
+      }catch{$('#status').textContent='無法產生 PNG，請使用白底 SVG。'}finally{URL.revokeObjectURL(svgUrl);button.disabled=false}
+    };
+    render();
+  </script>
+</body>
+</html>

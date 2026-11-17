@@ -1,0 +1,24 @@
+/* Shared keyboard entry points, independent of which tool is loaded. */
+.skip-link {
+  position: fixed;
+  top: 8px;
+  left: 16px;
+  z-index: 100;
+  max-width: calc(100% - 32px);
+  min-height: var(--control-height);
+  padding: 12px 16px;
+  border: 1px solid var(--color-brand);
+  border-radius: var(--radius-control);
+  background: var(--color-canvas);
+  color: var(--color-brand);
+  font: 500 var(--text-control)/1.5 var(--font-interface);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transform: translateY(calc(-100% - 16px));
+}
+.skip-link:focus { transform: none; outline: 3px solid var(--color-focus); outline-offset: 2px; }
+main[tabindex="-1"]:focus-visible { outline: 3px solid var(--color-focus); outline-offset: -3px; }
+canvas.maplibregl-canvas:focus-visible { outline: 3px solid var(--color-focus); outline-offset: -3px; }
+.map-loading { display: grid; place-items: center; min-height: 320px; padding: 24px; color: var(--color-muted); background: var(--color-surface); font-size: var(--text-body); line-height: var(--line-body); }
+.map-loading p { max-width: 30ch; margin: 0; }
+@media print { .skip-link { display: none; } }

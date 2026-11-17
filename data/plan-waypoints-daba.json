@@ -1,0 +1,131 @@
+{
+  "schemaVersion": 1,
+  "trailId": "027",
+  "checkedAt": "2026-10-25T04:37:02Z",
+  "coverageNote": "現有林業署027 KMZ僅含馬達拉溪附近至大小霸山區的131個線點，不含觀霧至馬達拉溪約19公里的大鹿林道東線；不能當作三日完整路線。新增路點取自官方明文座標與OSM明名地圖標註，未按路程比例內插、未把峰頂當霸基，未把點間直線當實際路線。",
+  "waypoints": [
+    {
+      "id": "daba-guanwu-villa",
+      "name": "觀霧山莊",
+      "aliases": [
+        "觀霧山莊"
+      ],
+      "longitude": 121.1142067,
+      "latitude": 24.5033841,
+      "sourceUrl": "https://www.openstreetmap.org/node/1506236957",
+      "sourceName": "OpenStreetMap contributors",
+      "checkedAt": "2026-10-25T04:37:02Z",
+      "coordinateBasis": "OpenStreetMap node 1506236957 v13 公開地圖標註位置（不是公車站或登山服務站）",
+      "limitations": "社群地圖標註，非現地精密測量；不是大鹿林道0K，也不是大霸登山服務站。",
+      "license": "ODbL-1.0",
+      "licenseUrl": "https://www.openstreetmap.org/copyright",
+      "attribution": "© OpenStreetMap contributors",
+      "sourceModifiedAt": "2023-09-18T15:15:50Z",
+      "osmElement": {
+        "type": "node",
+        "id": 1506236957,
+        "version": 13
+      }
+    },
+    {
+      "id": "daba-madala-trailhead",
+      "name": "馬達拉溪登山口",
+      "aliases": [
+        "馬達拉溪登山口"
+      ],
+      "longitude": 121.1925775,
+      "latitude": 24.4840694,
+      "sourceUrl": "https://www.openstreetmap.org/node/9165014952",
+      "sourceName": "OpenStreetMap contributors",
+      "checkedAt": "2026-10-25T04:37:02Z",
+      "coordinateBasis": "OpenStreetMap node 9165014952 公開地圖 highway=trailhead / name=馬達拉溪登山口 v1",
+      "limitations": "社群地圖標註，非現地精密測量；與林業署舊KMZ西端位置相差約百公尺，保留各自位置，不強制吸附或接線。",
+      "license": "ODbL-1.0",
+      "licenseUrl": "https://www.openstreetmap.org/copyright",
+      "attribution": "© OpenStreetMap contributors",
+      "sourceModifiedAt": "2021-10-11T13:30:53Z",
+      "osmElement": {
+        "type": "node",
+        "id": 9165014952,
+        "version": 1
+      }
+    },
+    {
+      "id": "daba-99-hut",
+      "name": "九九山莊",
+      "aliases": [
+        "九九山莊"
+      ],
+      "longitude": 121.208353,
+      "latitude": 24.468835,
+      "sourceUrl": "https://hike.taiwan.gov.tw/information_node.aspx?id=68",
+      "sourceName": "內政部國家公園署・臺灣登山申請一站式服務網",
+      "checkedAt": "2026-10-25T04:37:02Z",
+      "coordinateBasis": "官方景點頁直接列示東經121.208353、北緯24.468835（另列TWD97 X271120/Y2706972）",
+      "limitations": "官方介紹位置；來源未提供此座標測量日期與精度，不代表當日山屋開放、床位或水情。",
+      "license": "臺灣登山申請一站式服務網資料開放宣告（須註明出處）",
+      "licenseUrl": "https://hike.taiwan.gov.tw/OpenData.aspx"
+    },
+    {
+      "id": "daba-zhongba-hut",
+      "name": "中霸山屋",
+      "aliases": [
+        "中霸山屋"
+      ],
+      "longitude": 121.251286,
+      "latitude": 24.464724,
+      "sourceUrl": "https://hike.taiwan.gov.tw/information_node.aspx?id=304",
+      "sourceName": "內政部國家公園署・臺灣登山申請一站式服務網",
+      "checkedAt": "2026-10-25T04:37:02Z",
+      "coordinateBasis": "官方景點頁直接列示東經121.251286、北緯24.464724（另列TWD97 X275473/Y2706524）",
+      "limitations": "官方介紹位置；來源未提供此座標測量日期與精度，不代表當日山屋開放、床位或水情。",
+      "license": "臺灣登山申請一站式服務網資料開放宣告（須註明出處）",
+      "licenseUrl": "https://hike.taiwan.gov.tw/OpenData.aspx"
+    },
+    {
+      "id": "daba-zhongba-flat",
+      "name": "中霸坪",
+      "aliases": [
+        "中霸坪"
+      ],
+      "longitude": 121.25805,
+      "latitude": 24.463122,
+      "sourceUrl": "https://hike.taiwan.gov.tw/files/%E9%9B%AA%E9%9C%B8%E5%9C%8B%E5%AE%B6%E5%85%AC%E5%9C%92%E6%AD%A5%E9%81%93%E9%80%9A%E8%A8%8A%E9%BB%9E%E5%BD%99%E6%95%B4%E8%A1%A8.pdf",
+      "sourceName": "內政部國家公園署・雪霸國家公園步道通訊點彙整表",
+      "checkedAt": "2026-10-25T04:37:02Z",
+      "coordinateBasis": "官方PDF第3頁「大霸主線29.5k中霸坪」WGS84欄直接列示東經121.25805、北緯24.463122",
+      "limitations": "原始資料為通訊標示牌位置；不是營位或整片中霸坪的精密邊界，通訊欄位不轉用為即時訊號保證。文件未明載本座標測量日期。",
+      "license": "臺灣登山申請一站式服務網資料開放宣告（須註明出處）",
+      "licenseUrl": "https://hike.taiwan.gov.tw/OpenData.aspx"
+    }
+  ],
+  "unlocatedNames": [
+    "白橋（加利山岔路口）",
+    "3050高地（加利山岔路口）",
+    "伊澤山捷徑岔",
+    "伊澤山登山口",
+    "大霸尖山霸基（折返點）"
+  ],
+  "geometryVerification": {
+    "sourceUrl": "https://data.moa.gov.tw/OpenData/GetOpenDataFile.aspx?id=438&FileType=DataMore&RID=2037",
+    "sourceName": "林業及自然保育署・大霸尖山登山步道軌跡KMZ",
+    "pointCount": 131,
+    "placemarkCount": 1,
+    "namedWaypointCount": 0,
+    "westEndpoint": [
+      121.1930468543653,
+      24.48323046336119
+    ],
+    "eastEndpoint": [
+      121.2522460093664,
+      24.45564416398005
+    ],
+    "bounds": [
+      121.1930468543653,
+      24.45564416398005,
+      121.258429765143,
+      24.48323046336119
+    ],
+    "checkedAt": "2026-10-25T04:37:02Z"
+  }
+}

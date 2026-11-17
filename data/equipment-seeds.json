@@ -1,0 +1,195 @@
+{
+  "sourceReviewedAt": "2026-10-14T05:01:53.000Z",
+  "notes": "人工整理官方配置事實；來源文件查閱時間不代表設備現地查核。觀高設備保留為區外種子，尚不顯示在雪山／大霸選區。",
+  "items": [
+    {
+      "id": "spnp-pac-jiujiu",
+      "type": "PAC",
+      "name": "九九山莊 PAC",
+      "place": "九九山莊",
+      "latitude": 24.468835,
+      "longitude": 121.208353,
+      "placement": null,
+      "access": "公告未提供設備取用時段與具體保管位置；山屋／營地入園、住宿與設備取用限制需分別確認。",
+      "manager": "林業及自然保育署新竹分署",
+      "source": {
+        "name": "雪霸國家公園管理處 PAC 年度巡檢公告",
+        "url": "https://www.spnp.gov.tw/ch/specialreport/latest-news/3729",
+        "license": "僅整理公告所載設備事實與來源；未重製文章、照片或標誌"
+      },
+      "publishedAt": null,
+      "fetchedAt": "2026-10-14T05:01:53.000Z",
+      "checkedAt": null,
+      "checkNote": "公告記載 2026/4/13–4/17 期間完成巡檢，當次功能正常；未列每台確切巡檢日，目前是否可用未知。",
+      "coordinateNote": "官方山屋參考座標，非設備精確位置。座標來源：https://hike.taiwan.gov.tw/bed_1.aspx",
+      "regions": [
+        "daba"
+      ]
+    },
+    {
+      "id": "spnp-pac-zhongba",
+      "type": "PAC",
+      "name": "中霸山屋 PAC",
+      "place": "中霸山屋",
+      "latitude": 24.464724,
+      "longitude": 121.251286,
+      "placement": null,
+      "access": "公告未提供設備取用時段與具體保管位置；山屋／營地入園、住宿與設備取用限制需分別確認。",
+      "manager": "林業及自然保育署新竹分署",
+      "source": {
+        "name": "雪霸國家公園管理處 PAC 年度巡檢公告",
+        "url": "https://www.spnp.gov.tw/ch/specialreport/latest-news/3729",
+        "license": "僅整理公告所載設備事實與來源；未重製文章、照片或標誌"
+      },
+      "publishedAt": null,
+      "fetchedAt": "2026-10-14T05:01:53.000Z",
+      "checkedAt": null,
+      "checkNote": "公告記載 2026/4/13–4/17 期間完成巡檢，當次功能正常；未列每台確切巡檢日，目前是否可用未知。",
+      "coordinateNote": "官方山屋參考座標，非設備精確位置。座標來源：https://hike.taiwan.gov.tw/bed_1.aspx",
+      "regions": [
+        "daba"
+      ]
+    },
+    {
+      "id": "spnp-pac-banan",
+      "type": "PAC",
+      "name": "霸南山屋 PAC",
+      "place": "霸南山屋",
+      "latitude": 24.450776,
+      "longitude": 121.260944,
+      "placement": null,
+      "access": "公告未提供設備取用時段與具體保管位置；山屋／營地入園、住宿與設備取用限制需分別確認。",
+      "manager": "雪霸國家公園管理處",
+      "source": {
+        "name": "雪霸國家公園管理處 PAC 年度巡檢公告",
+        "url": "https://www.spnp.gov.tw/ch/specialreport/latest-news/3729",
+        "license": "僅整理公告所載設備事實與來源；未重製文章、照片或標誌"
+      },
+      "publishedAt": null,
+      "fetchedAt": "2026-10-14T05:01:53.000Z",
+      "checkedAt": null,
+      "checkNote": "公告記載 2026/4/13–4/17 期間完成巡檢，當次功能正常；未列每台確切巡檢日，目前是否可用未知。",
+      "coordinateNote": "官方山屋參考座標，非設備精確位置。座標來源：https://hike.taiwan.gov.tw/bed_1.aspx",
+      "regions": [
+        "daba"
+      ]
+    },
+    {
+      "id": "spnp-pac-sumida",
+      "type": "PAC",
+      "name": "素密達山屋 PAC",
+      "place": "素密達山屋",
+      "latitude": 24.423256,
+      "longitude": 121.250721,
+      "placement": null,
+      "access": "公告未提供設備取用時段與具體保管位置；山屋／營地入園、住宿與設備取用限制需分別確認。",
+      "manager": "雪霸國家公園管理處",
+      "source": {
+        "name": "雪霸國家公園管理處 PAC 年度巡檢公告",
+        "url": "https://www.spnp.gov.tw/ch/specialreport/latest-news/3729",
+        "license": "僅整理公告所載設備事實與來源；未重製文章、照片或標誌"
+      },
+      "publishedAt": null,
+      "fetchedAt": "2026-10-14T05:01:53.000Z",
+      "checkedAt": null,
+      "checkNote": "公告記載 2026/4/13–4/17 期間完成巡檢，當次功能正常；未列每台確切巡檢日，目前是否可用未知。",
+      "coordinateNote": "官方山屋參考座標，非設備精確位置。座標來源：https://hike.taiwan.gov.tw/bed_1.aspx",
+      "regions": [
+        "xueshan",
+        "daba"
+      ]
+    },
+    {
+      "id": "spnp-pac-xuebei",
+      "type": "PAC",
+      "name": "雪北山屋 PAC",
+      "place": "雪北山屋",
+      "latitude": 24.411513,
+      "longitude": 121.242809,
+      "placement": null,
+      "access": "公告未提供設備取用時段與具體保管位置；山屋／營地入園、住宿與設備取用限制需分別確認。",
+      "manager": "雪霸國家公園管理處",
+      "source": {
+        "name": "雪霸國家公園管理處 PAC 年度巡檢公告",
+        "url": "https://www.spnp.gov.tw/ch/specialreport/latest-news/3729",
+        "license": "僅整理公告所載設備事實與來源；未重製文章、照片或標誌"
+      },
+      "publishedAt": null,
+      "fetchedAt": "2026-10-14T05:01:53.000Z",
+      "checkedAt": null,
+      "checkNote": "公告記載 2026/4/13–4/17 期間完成巡檢，當次功能正常；未列每台確切巡檢日，目前是否可用未知。",
+      "coordinateNote": "官方山屋參考座標，非設備精確位置。座標來源：https://hike.taiwan.gov.tw/bed_1.aspx",
+      "regions": [
+        "xueshan"
+      ]
+    },
+    {
+      "id": "spnp-pac-369-camp",
+      "type": "PAC",
+      "name": "三六九臨時營地 PAC",
+      "place": "三六九臨時營地",
+      "latitude": null,
+      "longitude": null,
+      "placement": null,
+      "access": "公告未提供設備取用時段與具體保管位置；山屋／營地入園、住宿與設備取用限制需分別確認。",
+      "manager": "雪霸國家公園管理處",
+      "source": {
+        "name": "雪霸國家公園管理處 PAC 年度巡檢公告",
+        "url": "https://www.spnp.gov.tw/ch/specialreport/latest-news/3729",
+        "license": "僅整理公告所載設備事實與來源；未重製文章、照片或標誌"
+      },
+      "publishedAt": null,
+      "fetchedAt": "2026-10-14T05:01:53.000Z",
+      "checkedAt": null,
+      "checkNote": "公告記載 2026/4/13–4/17 期間完成巡檢，當次功能正常；未列每台確切巡檢日，目前是否可用未知。",
+      "coordinateNote": "臨時營地座標尚未查核，不以三六九山莊舊址代替；僅列於清單。",
+      "regions": [
+        "xueshan"
+      ]
+    },
+    {
+      "id": "ysnp-guangao-pac",
+      "type": "PAC",
+      "name": "觀高山屋 PAC",
+      "place": "觀高山屋（玉山，示範選區外）",
+      "latitude": null,
+      "longitude": null,
+      "placement": null,
+      "access": "公告未載設備具體放置位置、取用時段及箱內物品補充資訊；請向現場管理人員確認。",
+      "manager": "玉山國家公園管理處",
+      "source": {
+        "name": "玉山國家公園管理處 觀高山屋試營運公告",
+        "url": "https://www.ysnp.gov.tw/Announcement/C001000?ID=b1f3f8b3-8c3e-47c5-ba42-335118a6b529&PageIndex=1&PageType=1",
+        "license": "僅整理公告所載設備事實與來源；未重製文章、照片或標誌"
+      },
+      "publishedAt": "2025-03-31",
+      "fetchedAt": "2026-10-14T05:01:53.000Z",
+      "checkedAt": null,
+      "checkNote": "2025/3/31 官方公告記載曾配置；未提供實際設備巡檢日期，目前是否可用未知。",
+      "coordinateNote": "新觀高山屋座標未查核；不以已關閉的舊觀高工作站代替。",
+      "regions": []
+    },
+    {
+      "id": "ysnp-guangao-first_aid",
+      "type": "FIRST_AID",
+      "name": "觀高山屋 急救箱",
+      "place": "觀高山屋（玉山，示範選區外）",
+      "latitude": null,
+      "longitude": null,
+      "placement": null,
+      "access": "公告未載設備具體放置位置、取用時段及箱內物品補充資訊；請向現場管理人員確認。",
+      "manager": "玉山國家公園管理處",
+      "source": {
+        "name": "玉山國家公園管理處 觀高山屋試營運公告",
+        "url": "https://www.ysnp.gov.tw/Announcement/C001000?ID=b1f3f8b3-8c3e-47c5-ba42-335118a6b529&PageIndex=1&PageType=1",
+        "license": "僅整理公告所載設備事實與來源；未重製文章、照片或標誌"
+      },
+      "publishedAt": "2025-03-31",
+      "fetchedAt": "2026-10-14T05:01:53.000Z",
+      "checkedAt": null,
+      "checkNote": "2025/3/31 官方公告記載曾配置；未提供實際設備巡檢日期，目前是否可用未知。",
+      "coordinateNote": "新觀高山屋座標未查核；不以已關閉的舊觀高工作站代替。",
+      "regions": []
+    }
+  ]
+}
